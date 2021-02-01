@@ -29,27 +29,22 @@
     </blockquote>
 
     <script>
-//       function mouseOver() {
-//   var img = document.querySelector("#photo img");
-//   img.height = 100;
-// }
-      // let images = document.querySelector("#images");
-      // images.addEventListener("mouseover", function(event) {
-      //   event.target.classList.add(bigger)
-      // },false);
-      // document.querySelector("img").addEventListener("mouseover",()=>classList.add("bigger"))
-      let image=document.querySelector("#images");
-image.addEventListener("mouseover", function(){
-this.classList.add("bigger");
+
+let image=document.querySelector("#images");
+image.addEventListener("mouseover", function(event){
+event.currentTarget.classList.add("bigger");
 
 });
-// image.removeElementListener("mouseout", function(){
-// this.classList.remove("bigger")
-// },false);
+
+image.addEventListener("mouseout", function(event){
+event.currentTarget.classList.remove("bigger");
+ });
+
+
 let quote = document.querySelector("blockquote");
 quote.addEventListener("click", function(){
   window.open("https://quoteinvestigator.com/2014/05/27/rising/")
-})
+});
 
 
     </script>
